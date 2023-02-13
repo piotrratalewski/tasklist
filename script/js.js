@@ -18,8 +18,10 @@
     </li>
     `;
 		}
-		document.querySelector(".js-tasks");
+		document.querySelector(".js-tasks").innerHTML = htmlStrin;
 	};
-	const init = () => {};
+	const init = () => {
+		render();
+	};
 	init();
 }
