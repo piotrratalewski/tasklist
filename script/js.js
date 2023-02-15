@@ -1,14 +1,5 @@
 {
-	const tasks = [
-		{
-			content: "zrobić zakupy",
-			done: false,
-		},
-		{
-			content: "wydać pieniądze",
-			done: true,
-		},
-	];
+	const tasks = [];
 	const addNewTask = newTaskContent => {
 		tasks.push({
 			content: newTaskContent,
