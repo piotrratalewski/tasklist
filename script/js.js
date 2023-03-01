@@ -37,11 +37,9 @@
 		let htmlString = "";
 		for (const task of tasks) {
 			htmlString += `
-    <li
-	${task.done ? ' style="text-decoration: line-through"' : ""}
-	>
-	
-	<button class="tasks__button tasks__button--toggleDone js-toggleDone">
+			<li class="tasks__item
+			">
+	<button class="tasks__button tasks__button--toggleDone js-done">
 	${task.done ? "✓" : ""}
   </button>
   <span class="tasks__content${task.done ? " tasks__content--done" : ""}">
@@ -59,11 +57,16 @@
 	};
 	const onFormSubmit = event => {
 		event.preventDefault();
-		const newTaskContent = document.querySelector(".js-newTask").value.trim();
-		if (newTaskContent === "") {
-			return;
+
+		const newTaskElement = document.querySelector(".js-newTask");
+		const newTaskContent = newTaskElement.value.trim();
+
+		if (newTaskContent !== "") {
+			addNewTask(newTaskContent);
+			newTaskElement.value = "";
 		}
-		addNewTask(newTaskContent);
+
+		newTaskElement.focus();
 	};
 
 	const init = () => {
