@@ -11,3 +11,9 @@
 	transition: color 0.3s;
 	cursor: pointer;
 }
+@media(max-width: 767px) {
+    .buttons__button {
+        flex-basis: 100%;
+        margin: 10px;
+    }
+}
