@@ -1,5 +1,26 @@
 .section__header {
 	background-color: white;
+	margin: 2px 0;
+	display: grid;
+	grid-template-columns: 1fr auto;
+}
+
+.section__title {
+	background-color: white;
 	padding: 20px;
 	margin: 2px 0;
+}
+
+@media (max-width: 767px) {
+	.section__header {
+		grid-template-columns: 1fr;
+	}
+}
+
+.section__paragraph--styledV {
+	color: green;
+}
+
+.section__paragraph--styledX {
+	color: red;
 }

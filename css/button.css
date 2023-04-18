@@ -11,9 +11,18 @@
 	transition: color 0.3s;
 	cursor: pointer;
 }
-@media(max-width: 767px) {
-    .buttons__button {
-        flex-basis: 100%;
-        margin: 10px;
-    }
+
+@media (max-width: 767px) {
+	.buttons__button {
+		flex-basis: 100%;
+		margin: 10px;
+	}
+}
+
+.buttons__button:hover {
+	color: hsl(180, 100%, 35%);
+}
+
+.buttons__button:disabled {
+	color: #ccc;
 }
